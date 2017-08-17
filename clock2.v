@@ -29,7 +29,7 @@ module testbench;
  initial begin
      $dumpvars;
      clk<=0;
-     #5000;
+     #50000;
      $finish;
  end
  endmodule
