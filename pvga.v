@@ -9,9 +9,9 @@ module pvga (
 reg [10:0] cx = 0;
 reg [9:0]  cy = 0;
 
-assign VGA_R = v ? 4'hf : 4'b0;
-assign VGA_G = v ? 4'hf : 4'b0;
-assign VGA_B = v ? 4'hf : 4'b0;
+assign VGA_R = v ? 4'hf : 4'b0;	//cor red
+assign VGA_G = v ? 4'hf : 4'b0; //cor green		"h" de hexadecimal "f" valor em hexadecimal
+assign VGA_B = v ? 4'hf : 4'b0; //cor blue
 
 wire v = (cx >= 285) & (cx < 1555) & (cy >= 35) & (cy < 515);
 
