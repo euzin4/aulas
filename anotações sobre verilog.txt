@@ -1,0 +1,29 @@
+verilog:
+
+"begin" e "end", é o mesmo que, "{" e "}";
+---------------------------------------------
+posedge = borda positiva do clock;
+negedge = borda negativa do clock;
+exemplo:  sendo clk o clock
+always @(posedge clk)begin
+  instruções;
+end
+"ou"
+always @(negedge clk)begin
+  instruções;
+end
+---------------------------------------------
+usando case: inicia com "case" e termina com "endcase";
+exemplo de case:
+case (variavel)
+  0: begin      //0 é o valor da "variavel"
+    instruções;
+  end
+  1: begin      //1 é o valor da "variavel"
+    instruções;
+  end
+  2: begin      //2 é o valor da "variavel"
+    instruções;
+  end
+endcase
+---------------------------------------------
