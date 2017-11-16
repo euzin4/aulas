@@ -21,30 +21,30 @@ int main(){
 	area = calculaArea(a, b, c);
 	if(area < 0){
 		area = -area;
-    }
+    	}
 	printf("area: %d\n", area);
 	for(i = 0; i < 20; i++){
 		for(j = 0; j < 20; j++){
-            p.x = i;
-            p.y = j;
-            AB = calculaArea(a, b, p);
-            if(AB < 0){
-                AB = -AB;
-            }
-            AC = calculaArea(a, c, p);
-            if(AC < 0){
-                AC = -AC;
-            }
-            BC = calculaArea(b, c, p);
-            if(BC < 0){
-                BC = -BC;
-            }
-            if(AB + AC + BC == area){
-                printf("* ");
-            }
-            else{
-                printf("  ");
-            }
+	        	p.x = i;
+	            	p.y = j;
+	            	AB = calculaArea(a, b, p);
+	            	if(AB < 0){
+	                	AB = -AB;
+	            	}
+	            	AC = calculaArea(a, c, p);
+	            	if(AC < 0){
+	                	AC = -AC;
+	            	}
+	            	BC = calculaArea(b, c, p);
+	            	if(BC < 0){
+                		BC = -BC;
+            		}
+            		if(AB + AC + BC == area){
+                		printf("* ");
+            		}
+            		else{
+                		printf("  ");
+            		}
 		}
 		printf("\n");
 	}
