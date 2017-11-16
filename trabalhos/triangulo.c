@@ -4,9 +4,9 @@ typedef struct{
 	int x, y;
 }ponto;
 
-	/*|a.x  a.y 1|a.x  a.y       a=(1,1)
-	  |b.x  b.y 1|b.x  b.y 		 b=(1,4)
-	  |c.x  c.y 1|c.x  c.y		 c=(4,1)    */
+	/*|a.x  a.y 1|a.x  a.y       	a=(1,1)
+	  |b.x  b.y 1|b.x  b.y 		b=(1,4)
+	  |c.x  c.y 1|c.x  c.y		c=(4,1)    */
 int calculaArea(ponto a, ponto b, ponto c){
 	int A;
 	A = ((a.x * b.y) + (a.y * c.x) + (b.x * c.y)) - ((a.y * b.x) + (a.x * c.y) + (b.y * c.x));
