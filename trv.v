@@ -57,26 +57,26 @@ initial
     begin
         $dumpvars(0,A);
         #1
-        ptAX <= 10;
-        ptAY <= 10;
-        ptBX <= 30;
-        ptBY <= 10;
-        pt3X <= 20;
-        pt3Y <= 30;
-        ptCX <= 15;
-        ptCY <= 15;
+        ptAX <= 1;
+        ptAY <= 1;
+        ptBX <= 3;
+        ptBY <= 1;
+        pt3X <= 2;
+        pt3Y <= 3;
+        ptCX <= 1.5;
+        ptCY <= 1.5;
         #1
-        ptCX <= 15;
-        ptCY <= 15;
+        ptCX <= 1.5;
+        ptCY <= 1.5;
         #1
-        ptCX <= 9;
-        ptCY <= 15;
+        ptCX <= 0.9;
+        ptCY <= 1.5;
         #1
-        ptCX <= 10;
-        ptCY <= 11;
+        ptCX <= 1;
+        ptCY <= 1.1;
         #1
-        ptCX <= 30;
-        ptCY <= 11;
+        ptCX <= 3;
+        ptCY <= 1.1;
         #40
         $finish;
     end
