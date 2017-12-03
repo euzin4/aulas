@@ -28,18 +28,18 @@ input [11:0] ptAX,
 input [11:0] ptAY,
 input [11:0] ptBX,
 input [11:0] ptBY,
-input [11:0] Ponto3X,
-input [11:0] Ponto3Y,
+input [11:0] pt3X,
+input [11:0] pt3Y,
 input [11:0] pttX,
 input [11:0] pttY,
-output dentro);
+output ins);
 wire trv1;
 wire trv2;
 wire trv3;
-assign dentro = (trv1 == 1 && trv2 == 1 && trv3 == 1) ? 1:0;
+assign ins = (trv1 == 1 && trv2 == 1 && trv3 == 1) ? 1:0;
 trv S1(ptAX, ptAY, ptBX, ptBY, pttX, pttY, trv1);
-trv S2(ptBX, ptBY, Ponto3X, Ponto3Y, pttX, pttY, trv2);
-trv S3(Ponto3X, Ponto3Y, ptAX, ptAY, pttX, pttY, trv3);
+trv S2(ptBX, ptBY, pt3X, pt3Y, pttX, pttY, trv2);
+trv S3(pt3X, pt3Y, ptAX, ptAY, pttX, pttY, trv3);
 endmodule
 
 module Teste;
@@ -47,12 +47,12 @@ reg [11:0] ptAX;
 reg [11:0] ptAY;
 reg [11:0] ptBX;
 reg [11:0] ptBY;
-reg [11:0] Ponto3X;
-reg [11:0] Ponto3Y;
+reg [11:0] pt3X;
+reg [11:0] pt3Y;
 reg [11:0] pttX;
 reg [11:0] pttY;
 wire Dentro;
-tstrig A(ptAX, ptAY, ptBX, ptBY, Ponto3X, Ponto3Y, pttX, pttY, Dentro);
+tstrig A(ptAX, ptAY, ptBX, ptBY, pt3X, pt3Y, pttX, pttY, Dentro);
 initial
         begin
            $dumpvars(0,A);
@@ -61,8 +61,8 @@ initial
            ptAY <= 10;
            ptBX <= 30;
            ptBY <= 10;
-           Ponto3X <= 20;
-           Ponto3Y <= 30;
+           pt3X <= 20;
+           pt3Y <= 30;
            pttX <= 15;
            pttY <= 15;
            #1
